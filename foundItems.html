@@ -1,6 +1,7 @@
+<div class="resultNull" ng-if="list.isEmpty()">Nothing found</div>
 <ul>
-  <li ng-repeat="elem in ctrl2.found">
-    Name: {{ elem.name }}, Short name: {{ elem.short_name }}, Description: {{ elem.description }}
-    <button ng-click="ctrl2.onRemove({index: $index});"> Don't want this one!</button>
+  <li ng-repeat="item in list.found">
+    {{item.name}}, {{item.short_name}}, {{item.description}}
+    <button ng-click="list.onRemove({index: $index});">Don't want this one!</button>
   </li>
 </ul>
